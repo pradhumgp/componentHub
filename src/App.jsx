@@ -2,11 +2,13 @@
 function App() {
   return (
     <>
-      <div className="h-screen w-screen bg-gray-900 flex flex-col items-center">
-        <p className="text-white text-2xl font-poppins p-12">
+      <div className="w-screen h-screen p-3 bg-black">
+        <div className="bg-gray-900 rounded-sm h-max">
+          <p className="p-12 text-2xl text-white font-poppins">
           This is a react component hub for creating and storing logic/code for
           different components.
         </p>
+        </div>
       </div>
     </>
   );
