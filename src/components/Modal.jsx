@@ -2,7 +2,7 @@
 
 const Modal = () => {
   return (
-    <div>Modal</div>
+    <div>Modal component comes hereeeeeeeeeeeeeeeeee</div>
   )
 }
 

@@ -1,13 +1,40 @@
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+  const list = [
+    {
+      name: "Modal",
+    },
+    {
+      name: "Accordion",
+    },
+  ];
+  
+  const toComponent = (name) => {
+    navigate(name);
+    console.log(name);
+  };
+  
   return (
     <>
-      <div className="w-screen h-screen p-3 bg-black">
-        <div className="bg-gray-900 rounded-sm h-max">
-          <p className="p-12 text-2xl text-white font-poppins">
-          This is a react component hub for creating and storing logic/code for
+      <div className="flex flex-col w-screen h-screen p-8 bg-gray-900">
+        <p className="my-4 text-2xl text-white font-poppins">
+          This is a personal project for creating and storing logic/code for
           different components.
         </p>
+
+        <div>
+          {list.map((item, index) => (
+            <div
+              key={index}
+              className="flex gap-2 my-2 text-white"
+              onClick={() => toComponent(item.name)}
+            >
+              {/* <span>{index+1}</span> */}
+              <span>{item.name}</span>
+            </div>
+          ))}
         </div>
       </div>
     </>
