@@ -9,7 +9,7 @@ const ModalPage = () => {
 
   return (
     <>
-     <div className="flex items-center justify-center w-screen h-screen p-8 bg-gray-800">
+     <div className="flex items-center justify-center w-screen h-screen p-8 bg-gray-900">
       <button
         onClick={toggleModal}
         className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700"
