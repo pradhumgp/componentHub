@@ -9,17 +9,19 @@ function App() {
     {
       name: "Accordion",
     },
+    {
+      name: "Tooltip",
+    },
   ];
   
   const toComponent = (name) => {
     navigate(name);
-    console.log(name);
   };
   
   return (
     <>
       <div className="flex flex-col w-screen h-screen p-8 bg-gray-900">
-        <p className="my-4 text-2xl text-white font-poppins">
+        <p className="my-4 text-4xl text-white font-poppins">
           This is a personal project for creating and storing logic/code for
           different components.
         </p>
@@ -32,7 +34,7 @@ function App() {
               onClick={() => toComponent(item.name)}
             >
               {/* <span>{index+1}</span> */}
-              <span>{item.name}</span>
+              <span className="text-sm font-poppins">{item.name}</span>
             </div>
           ))}
         </div>

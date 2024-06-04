@@ -8,6 +8,7 @@ import {
 
 import App from './App.jsx';
 import ModalPage from './pages/ModalPage.jsx';
+import TooltipPage from './pages/TooltipPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/modal",
     element: <ModalPage/>,
+  },
+  {
+    path: "/tooltip",
+    element: <TooltipPage/>,
   },
 ]);
 
