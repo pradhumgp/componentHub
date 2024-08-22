@@ -3,7 +3,7 @@ const Modal = ({ show, onClose, children }) => {
     <>
       {show && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-8 bg-white bg-opacity-50"
+          className="fixed inset-0 flex items-center justify-center p-8 bg-white bg-opacity-50 z-54"
           onClick={onClose}
         >
           <div className="relative w-9/12 h-auto p-8 bg-white rounded-md shadow-lg">

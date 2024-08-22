@@ -9,6 +9,7 @@ import {
 import App from './App.jsx';
 import ModalPage from './pages/ModalPage.jsx';
 import TooltipPage from './pages/TooltipPage.jsx';
+import Layout from './components/Layout.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Layout>
      <RouterProvider router={router} />
+     </Layout>
   </React.StrictMode>,
 )

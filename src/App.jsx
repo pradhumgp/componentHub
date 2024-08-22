@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Layout from "./components/Layout";
 
 function App() {
   const navigate = useNavigate();
@@ -13,18 +14,18 @@ function App() {
       name: "Tooltip",
     },
   ];
-  
+
   const toComponent = (name) => {
     navigate(name);
   };
-  
+
   return (
     <>
-      <div className="flex flex-col w-screen h-screen p-8 bg-gray-900">
-        <p className="my-4 text-4xl text-white font-poppins">
-          This is a personal project for creating and storing logic/code for
-          different components.
-        </p>
+      <div className="flex flex-col items-center gap-12">
+        <div className="flex items-center gap-1 text-3xl font-bold font-poppins">
+          <span className="text-white">Component</span>
+          <span className="p-0.5 text-black bg-orange-400 rounded-sm">hub</span>
+        </div>
 
         <div>
           {list.map((item, index) => (
