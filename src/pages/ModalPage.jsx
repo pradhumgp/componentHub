@@ -1,6 +1,7 @@
 import Modal from "../components/Modal";
 import { useState } from "react";
 
+
 const ModalPage = () => {
   const [show, setShow] = useState(false);
   const toggleModal = () => {

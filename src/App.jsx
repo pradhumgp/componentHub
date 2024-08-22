@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import Layout from "./components/Layout";
 
 function App() {
   const navigate = useNavigate();
@@ -22,7 +21,7 @@ function App() {
   return (
     <>
       <div className="flex flex-col items-center gap-12">
-        <div className="flex items-center gap-1 text-3xl font-bold font-poppins">
+        <div className="flex items-center gap-1 text-3xl font-bold">
           <span className="text-white">Component</span>
           <span className="p-0.5 text-black bg-orange-400 rounded-sm">hub</span>
         </div>
@@ -34,8 +33,8 @@ function App() {
               className="flex gap-2 my-2 text-white"
               onClick={() => toComponent(item.name)}
             >
-              {/* <span>{index+1}</span> */}
-              <span className="text-sm font-poppins">{item.name}</span>
+              <span>{index+1}</span>
+              <span className="text-sm">{item.name}</span>
             </div>
           ))}
         </div>
