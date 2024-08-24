@@ -3,7 +3,7 @@ import Accordion from "../components/Accordion"
 
 const AccordionPage = () => {
   return (
-    <div className="h-screen">
+    <div>
       <Accordion/>
     </div>
   )

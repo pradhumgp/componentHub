@@ -1,23 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
-const Pagination = () => {
+const PaginationBE = () => {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
-  const fetchProducts = async () => {
-    const res = await fetch("https://dummyjson.com/products?limit=100");
+  const fetchProducts = useCallback(async () => {
+    const res = await fetch(`https://dummyjson.com/products?limit=10&skip=${page * 10 - 10}`);
     const data = await res.json();
     setProducts(data.products);
-  };
+    setTotalPages(Math.ceil(data.total / 10));
+  }, [page]);
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [fetchProducts, page]);
 
   const selectPageHandler = (selectedPage) => {
     if (
       selectedPage >= 1 &&
-      selectedPage <= products.length / 10 &&
+      selectedPage <= totalPages &&
       selectedPage !== page
     ) {
       setPage(selectedPage);
@@ -28,7 +30,7 @@ const Pagination = () => {
     <>
       {products.length > 0 && (
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {products.slice(page * 10 - 10, page * 10).map((product, index) => {
+          {products.map((product, index) => {
             return (
               <div
                 key={index}
@@ -56,7 +58,7 @@ const Pagination = () => {
           >
             ◀
           </span>
-          {[...Array(products.length / 10)].map((_, index) => {
+          {[...Array(totalPages)].map((_, index) => {
             return (
               <span
                 key={index}
@@ -81,4 +83,4 @@ const Pagination = () => {
   );
 };
 
-export default Pagination;
+export default PaginationBE;

@@ -2,7 +2,7 @@ import Comments from "../components/Comments"
 
 const CommentsPage = () => {
   return (
-    <div className="h-screen">
+    <div>
       <Comments/>
     </div>
   )
