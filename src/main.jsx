@@ -11,6 +11,7 @@ import Layout from "./components/Layout.jsx";
 import CommentsPage from "./pages/CommentsPage.jsx";
 import AccordionPage from "./pages/AccordionPage.jsx";
 import SearchBarPage from "./pages/SearchBarPage.jsx";
+import PaginationPage from "./pages/PaginationPage.jsx";
 //Pages import
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/SearchBar",
     element: <SearchBarPage />,
+  },
+  {
+    path: "/Pagination",
+    element: <PaginationPage />,
   },
 ]);
 

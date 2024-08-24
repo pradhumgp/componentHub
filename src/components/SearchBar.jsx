@@ -154,7 +154,7 @@ const SearchBar = () => {
     }
   }, [debouncedQuery]);
   return (
-    <div className="flex flex-col gap-2">
+    <>
       <input
         type="text"
         value={query}
@@ -169,7 +169,7 @@ const SearchBar = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 

@@ -17,6 +17,9 @@ function App() {
     },
     {
       name: "SearchBar"
+    },
+    {
+      name: "Pagination"
     }
   ];
 
@@ -26,7 +29,7 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-12">
+      <div className="flex flex-col items-center h-screen gap-12">
         <div className="flex items-center gap-1 text-3xl font-bold">
           <span className="text-white">Component</span>
           <span className="p-0.5 text-black bg-orange-400 rounded-sm">hub</span>
