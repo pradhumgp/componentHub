@@ -12,6 +12,12 @@ function App() {
     {
       name: "Tooltip",
     },
+    {
+      name: "Comments"
+    },
+    {
+      name: "SearchBar"
+    }
   ];
 
   const toComponent = (name) => {
@@ -33,8 +39,8 @@ function App() {
               className="flex gap-2 my-2 text-white"
               onClick={() => toComponent(item.name)}
             >
-              <span>{index+1}</span>
-              <span className="text-sm">{item.name}</span>
+              {/* <span>{index+1}</span> */}
+              <span className="text-sm hover:underline">{item.name}</span>
             </div>
           ))}
         </div>

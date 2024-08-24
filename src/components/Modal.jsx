@@ -3,7 +3,7 @@ const Modal = ({ show, onClose, children }) => {
     <>
       {show && (
         <div
-          className="fixed inset-0 flex items-center justify-center p-8 bg-white bg-opacity-50 z-54"
+          className="fixed inset-0 flex items-center justify-center p-8 bg-black z-54"
           onClick={onClose}
         >
           <div className="relative w-9/12 h-auto p-8 bg-white rounded-md shadow-lg">
@@ -13,7 +13,7 @@ const Modal = ({ show, onClose, children }) => {
             >
               &times;
             </button>
-            <>{children}</>
+            {children}
           </div>
         </div>
       )}
